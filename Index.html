@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html> 
+<html>
+<head>
+    <title></title>
+    <link href="Scripts/jquery.mobile-1.0a4.1.min.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/jquery-1.6.1.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.mobile-1.0a4.1.min.js" type="text/javascript"></script>
+
+    <script language=javascript>
+
+        $(function () {
+
+            $("#imgrangecard").click(function (ev) {
+                mouseX = ev.pageX;
+                mouseY = ev.pageY
+                //alert(mouseX + ' ' + mouseY);         
+                var color = '#006600';
+                var size = '16px';
+           
+                $("body").append(
+		        $('<div></div>')
+			        .css('position', 'absolute')
+			        .css('top', mouseY + 'px')
+			        .css('left', mouseX + 'px')
+			        .css('width', size)
+			        .css('height', size)
+                    .css('background-color', color)
+                    .css('background', 'transparent url(images/targetball.gif)')
+                    .css('z-index', 999)
+                    
+		        )
+
+            });
+        });
+    
+    </script>
+</head>
+<body>
+<div data-role="page">
+
+	<div data-role="header">
+		<h1>GolfTrack Cards.</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+	    <img alt="" id="imgrangecard" src="images/cardzone3a.jpg" />		
+	</div><!-- /content -->
+    
+	<div data-role="footer">
+		<h4>&copy; Golftrackcards.com</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+</body>
+</html>
